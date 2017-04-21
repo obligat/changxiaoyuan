@@ -1,0 +1,42 @@
+/* pages/loginZhiHuiClass/loginZhiHuiClass.wxss */
+
+.input-placeholder {
+  color: #aaa;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20% 10%;
+}
+
+.input-box {
+  display: flex;
+  border-bottom: 1px solid black;
+  margin: 40rpx;
+}
+
+.input-box > view {
+  color: #aaa;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+}
+
+.error-massage {
+  color: red;
+  font-size: small;
+  margin: -20rpx 40rpx 40rpx 40rpx;
+}
+
+.btn-login {
+  background: white;
+  padding: 0 50rpx;
+  width: 400rpx;
+  border: 1px solid #aaa;
+  border-radius: 50rpx;
+}
+
+.red-line{
+  border-bottom: 1px solid red;
+}

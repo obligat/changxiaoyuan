@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/loginZhiHuiClass/loginZhiHuiClass",
+    "pages/usercenter/usercenter",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/library/library",
+    "pages/borrow/borrow",
+    "pages/bookList/bookList",
+    "pages/bookDetail/bookDetail",
+    "pages/feedback/feedback",
+    "pages/loginLibrary/loginLibrary"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "我的"
+      }
+    ]
+  }
+}

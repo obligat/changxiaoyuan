@@ -1,0 +1,14 @@
+/**app.wxss**/
+
+.h1 {
+  font-size: 64rpx;
+}
+
+.h2 {
+  font-size: 48rpx;
+}
+
+.hidden {
+  visibility: hidden;
+}
+

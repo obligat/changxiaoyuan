@@ -1,0 +1,17 @@
+
+<!--pages/usercenter/usercenter.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class="bind-account" wx:if="{{!username}}">
+      <navigator url="../loginZhiHuiClass/loginZhiHuiClass">绑定学校账号 ></navigator>
+    </view>
+    <view class="bind-account" wx:else>{{username}}</view>
+  </view>
+  <navigator url="../feedback/feedback" class="feedback">
+    <text>反馈 </text>
+    <text class="right-arrow">></text>
+  </navigator>
+  <button class="btn-logout {{username ? '': 'hidden'}}" bindtap="logout">注销</button>
+</view>
