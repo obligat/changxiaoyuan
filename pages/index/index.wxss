@@ -1,5 +1,9 @@
 /**index.wxss**/
 
+.container {
+  background: #f5f5f5;
+}
+
 .wrapper {
   background: deepskyblue;
   height: 100rpx;
@@ -13,8 +17,8 @@
   border-bottom: 1px solid white;
   background: deepskyblue;
   color: white;
-  margin:30rpx 20rpx 20rpx 20rpx;
-  padding:0 10rpx;
+  margin: 30rpx 20rpx 20rpx 20rpx;
+  padding: 0 10rpx;
   font-size: 34rpx;
 }
 
@@ -50,16 +54,20 @@
   padding-top: 40rpx;
 }
 
-.no-class-table {
-  border: 1px solid lavender;
+.no-class-table, .swiper-item {
+  background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   height: 900rpx;
   width: 600rpx;
   border-radius: 20rpx;
-  box-shadow: 0 4rpx 2rpx 4rpx gainsboro;
+  box-shadow: 0 8rpx 16rpx rgba(87, 87, 87, 0.4);
+  margin: 0 auto;
+}
+
+.no-class-table {
+  justify-content: space-around;
+  align-items: center;
 }
 
 .smail-box {
@@ -104,10 +112,70 @@
   left: 39rpx;
 }
 
-.verdana-font {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .btn-login {
   margin-bottom: 80rpx;
+}
+
+swiper {
+  height: 1000rpx;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.table-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex: 2;
+  background: black;
+  border-radius: 20rpx 20rpx 0 0;
+  color: white;
+}
+
+.table-head-image {
+  width: 120rpx;
+  height: 120rpx;
+  background: #fff;
+  border: 2rpx solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye-left, .eye-right {
+  width: 20rpx;
+  height: 20rpx;
+  border: 2rpx solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+.eye-right {
+  left: 65%;
+}
+
+.table-body {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.tr {
+  display: flex;
+  margin-top: 50rpx;
+}
+
+.table-number {
+  width: 20%;
+  text-align: center;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.item {
+  flex: 1;
+  flex-direction: column;
 }

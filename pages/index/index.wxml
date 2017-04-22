@@ -22,10 +22,74 @@
           <view class="mouth"></view>
         </view>
       </view>
-      <view class="tip">登录后才能查看课表哦
-        <text class="verdana-font">^_^</text>
+      <view class="tip">登录后才能查看课表哦^_^
       </view>
-      <button class="btn-login">立即登录</button>
+      <button class="btn-login" bindtap="handleLogin">
+        立即登录
+      </button>
     </view>
+    <block wx:else>
+      <swiper>
+        <block wx:for="{{courseMessage}}" wx:for-item="week" wx:for-index="day" wx:key="num">
+          <swiper-item>
+            <view class="swiper-item">
+              <view class="table-head">
+                <view class="table-head-image">
+                  <view class="eye-left"></view>
+                  <view class="eye-right"></view>
+                </view>
+                <view>星期{{week[4].num}}</view>
+              </view>
+              <view class="table-body">
+                <block wx:for="{{week}}" wx:key="">
+                  <block wx:if="{{index < 4}}">
+                    <view class="tr">
+                      <view class="table-number">{{2*index+1}}-{{2*index+2}}</view>
+                      <view class="item">
+                        <view>{{item.S_Name}}</view>
+                        <view>
+                          <text>{{item.RoomNum}} </text>
+                          <text>{{item.Teach_Name}}</text>
+                        </view>
+                      </view>
+                    </view>
+                  </block>
+                </block>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </block>
+
+    <!--<block wx:else>
+      <swiper circular="true">
+        <block wx:for="{{courseMessage}}" wx:for-item="week" wx:for-index="day" wx:key="num">
+          <swiper-item>
+            <view class="swiper-item">
+              <view class="h2">星期{{week[4].num}}</view>
+              <view class="table">
+                <view class="tr">
+                  <view class="th">\</view>
+                  <view class="th">课程</view>
+                  <view class="th">教室</view>
+                  <view class="th">教师</view>
+                </view>
+                <block wx:for="{{week}}" wx:key="">
+                  <block wx:if="{{index < 4}}">
+                    <view class="tr">
+                      <view class="th">{{2*index+1}}--{{2*index+2}}</view>
+                      <view class="th">{{item.S_Name}}</view>
+                      <view class="th">{{item.RoomNum}}</view>
+                      <view class="th">{{item.Teach_Name}}</view>
+                    </view>
+                  </block>
+                </block>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </block>-->
   </view>
 </view>
