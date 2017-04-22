@@ -27,10 +27,8 @@
 .btn-group, .class-table {
   background: white;
   width: 100%;
-}
-
-.btn-group {
   display: flex;
+  justify-content: center;
 }
 
 .btn-group button {
@@ -41,4 +39,70 @@
   line-height: 55rpx;
   margin-top: 20rpx;
   border-radius: 50rpx;
+}
+
+.class-table {
+  padding-top: 40rpx;
+}
+
+.no-class-table {
+  border: 1px solid lavender;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 900rpx;
+  width: 600rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 2rpx 4rpx gainsboro;
+}
+
+.smail-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 20rpx;
+  width: 40%;
+  height: 30%;
+}
+
+.smail-top {
+  height: 80rpx;
+  background: gray;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.smail-bottom {
+  width: 126rpx;
+  height: 126rpx;
+  border: 2px solid gray;
+  border-radius: 50%;
+  align-self: center;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  top: 20rpx;
+  left: 24rpx;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mouth {
+  position: absolute;
+  border-radius: 50%;
+  border-bottom: 2px solid black;
+  top: 50rpx;
+  width: 50rpx;
+  height: 50rpx;
+  left: 39rpx;
+}
+
+.verdana-font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-login {
+  margin-bottom: 80rpx;
 }

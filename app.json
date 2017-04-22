@@ -15,7 +15,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "deepskyblue",
     "navigationBarTitleText": "畅校园",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "deepskyblue"
   },
   "tabBar": {
     "list": [

@@ -10,7 +10,20 @@
     <button>西邮黄页</button>
     <button>借阅查询</button>
   </view>
-  <view class="classTable">
-
+  <view class="class-table">
+    <view class="no-class-table" wx:if="{{!username}}">
+      <view class="h2">课程表</view>
+      <view class="smail-box">
+        <view class="smail-top"></view>
+        <view class="smail-bottom">
+          <view class="eye"> ^ ^ </view>
+          <view class="mouth"></view>
+        </view>
+      </view>
+      <view class="tip">登录后才能查看课表哦
+        <text class="verdana-font">^_^</text>
+      </view>
+      <button class="btn-login">立即登录</button>
+    </view>
   </view>
 </view>
