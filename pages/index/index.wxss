@@ -2,7 +2,7 @@
 
 .wrapper {
   background: deepskyblue;
-  height: 90rpx;
+  height: 100rpx;
   width: 100%;
 }
 
@@ -13,21 +13,21 @@
   border-bottom: 1px solid white;
   background: deepskyblue;
   color: white;
-  margin: 20rpx 20rpx 20rpx 20rpx;
+  margin:30rpx 20rpx 20rpx 20rpx;
   padding:0 10rpx;
-
+  font-size: 34rpx;
 }
 
 .input-placeholder {
   color: white;
   opacity: 0.8;
-  font-size: 28rpx;
+  font-size: 34rpx;
 }
 
 .icon-cancel {
   color: white;
   opacity: 0.8;
-  font-size: 28rpx;
+  font-size: 34rpx;
 }
 
 .btn-group, .class-table {
