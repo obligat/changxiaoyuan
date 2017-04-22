@@ -1,31 +1,36 @@
 /**index.wxss**/
 
-.container {
+.wrapper {
   background: deepskyblue;
+  height: 90rpx;
+  width: 100%;
 }
 
 .search-box {
   display: flex;
-  width: 90%;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid white;
   background: deepskyblue;
   color: white;
-  margin-bottom: 20rpx;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  padding:0 10rpx;
+
 }
 
 .input-placeholder {
   color: white;
   opacity: 0.8;
+  font-size: 28rpx;
 }
 
 .icon-cancel {
   color: white;
   opacity: 0.8;
+  font-size: 28rpx;
 }
 
 .btn-group, .class-table {
-  background: white;
   width: 100%;
   display: flex;
   justify-content: center;
