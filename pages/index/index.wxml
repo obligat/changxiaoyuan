@@ -5,4 +5,12 @@
     <input placeholder="搜素图书" placeholder-class="input-placeholder" value="{{searchInput}}" bindinput="handleKeyInput" />
     <view class="icon-cancel" style="opacity:{{searchInput?opacity:''}}" bindtap="clearSearchInput">X</view>
   </view>
+  <view class="btn-group">
+    <button>无课教室</button>
+    <button>西邮黄页</button>
+    <button>借阅查询</button>
+  </view>
+  <view class="classTable">
+
+  </view>
 </view>

@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 .container {
-    background: deepskyblue
+  background: deepskyblue;
 }
 
 .search-box {
@@ -15,11 +15,30 @@
 }
 
 .input-placeholder {
-    color: white;
-    opacity: 0.8;
+  color: white;
+  opacity: 0.8;
 }
 
 .icon-cancel {
-    color: white;
-    opacity: 0.8;
+  color: white;
+  opacity: 0.8;
+}
+
+.btn-group, .class-table {
+  background: white;
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.btn-group button {
+  background: black;
+  color: white;
+  padding: 0 40rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  margin-top: 20rpx;
+  border-radius: 50rpx;
 }
