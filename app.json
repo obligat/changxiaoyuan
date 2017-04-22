@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/usercenter/usercenter",
     "pages/loginZhiHuiClass/loginZhiHuiClass",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/library/library",
     "pages/borrow/borrow",
@@ -13,9 +13,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "deepskyblue",
+    "navigationBarTitleText": "畅校园",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [

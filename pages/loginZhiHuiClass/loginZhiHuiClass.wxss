@@ -1,9 +1,5 @@
 /* pages/loginZhiHuiClass/loginZhiHuiClass.wxss */
 
-.input-placeholder {
-  color: #aaa;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -15,12 +11,6 @@
   display: flex;
   border-bottom: 1px solid black;
   margin: 40rpx;
-}
-
-.input-box > view {
-  color: #aaa;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: lighter;
 }
 
 .error-massage {

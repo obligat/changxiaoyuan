@@ -1,2 +1,8 @@
-<!--index.wxml-->
 
+<!--index.wxml-->
+<view class="container">
+  <view class="search-box">
+    <input placeholder="搜素图书" placeholder-class="input-placeholder" value="{{searchInput}}" bindinput="handleKeyInput" />
+    <view class="icon-cancel" style="opacity:{{searchInput?opacity:''}}" bindtap="clearSearchInput">X</view>
+  </view>
+</view>

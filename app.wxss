@@ -1,5 +1,13 @@
 /**app.wxss**/
 
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .h1 {
   font-size: 64rpx;
 }
@@ -12,3 +20,12 @@
   visibility: hidden;
 }
 
+.icon-cancel {
+  color: #aaa;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+}
+
+.input-placeholder {
+  color: #aaa;
+}

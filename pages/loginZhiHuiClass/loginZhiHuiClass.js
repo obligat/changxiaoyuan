@@ -4,8 +4,6 @@ Page({
   data: {
     username: '',
     password: '',
-    hasUsernameInput: false,
-    hasPasswordInput: false,
     errorMsg: ''
   },
   formSubmit: function (e) {
@@ -65,33 +63,20 @@ Page({
   bindUsernameInput: function (e) {
     this.setData({
       username: e.detail.value,
-      hasUsernameInput: true,
       errorMsg: ''
     })
-    if (e.detail.value == '') {
-      this.setData({
-        hasUsernameInput: false
-      })
-    }
   },
 
   bindPasswordInput: function (e) {
     this.setData({
       password: e.detail.value,
-      hasPasswordInput: true,
       errorMsg: ''
     })
-    if (e.detail.value == '') {
-      this.setData({
-        hasPasswordInput: false
-      })
-    }
   },
 
   clearUsernameInput: function (e) {
     this.setData({
       username: '',
-      hasUsernameInput: false,
       errorMsg: ''
     })
   },
@@ -99,7 +84,6 @@ Page({
   clearPasswordInput: function (e) {
     this.setData({
       password: '',
-      hasPasswordInput: false,
       errorMsg: ''
     })
   },
