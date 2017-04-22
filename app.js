@@ -106,11 +106,9 @@ App({
       })
     }
   },
-  
+
   globalData: {
     userInfo: null,
-    isLogin: false,
-    isBindAccount: false,
     modelMessage: ''
   }
 })

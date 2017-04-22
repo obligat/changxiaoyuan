@@ -48,7 +48,7 @@ Page({
             })
           }, 1000)
 
-        } if (res.data.mid_res == "学号或密码错误") {
+        } if (res.data.mid_res) {
           that.setData({
             errorMsg: res.data.mid_res
           })
@@ -113,7 +113,6 @@ Page({
   },
   onShow: function () {
     // 页面显示
-    console.log('loginZhiHuiClass app.globalData.isBindAccount : ' + app.globalData.isBindAccount)
   },
   onHide: function () {
     // 页面隐藏

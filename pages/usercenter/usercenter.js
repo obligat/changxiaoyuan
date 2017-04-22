@@ -13,7 +13,7 @@ Page({
       url: 'https://wwwxinle.cn/wechatapp/cancel.php',
       data: {
         id: this.data.username,
-        do: 'delete'
+        type: 'delete'
       },
       method: 'POST',
       header: {
@@ -40,23 +40,16 @@ Page({
         userInfo: userInfo
       })
     })
-
-    if (options.isBindAccount) {
-      this.setData({
-        isBindAccount: true
-      })
-    }
-
   },
   onReady: function () {
     // 页面渲染完成
   },
   onShow: function () {
     // 页面显示
-    console.log('username' + this.data.username)
     this.setData({
       username: wx.getStorageSync('username')
     })
+    console.log('usercenter username' + this.data.username)
   },
   onHide: function () {
     // 页面隐藏
