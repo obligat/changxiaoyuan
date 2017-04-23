@@ -18,18 +18,12 @@ Page({
       method: 'POST',
       header: {
         "content-type": "application/x-www-form-urlencoded"
-      }, // 设置请求的 header
+      },
       success: function (res) {
         that.setData({
           username: ''
         })
         wx.setStorageSync('username', '')
-      },
-      fail: function (res) {
-        // fail
-      },
-      complete: function (res) {
-        // complete
       }
     })
   },
@@ -49,7 +43,7 @@ Page({
     this.setData({
       username: wx.getStorageSync('username')
     })
-    console.log('usercenter username' + this.data.username)
+    console.log('usercenter username: ' + this.data.username)
   },
   onHide: function () {
     // 页面隐藏

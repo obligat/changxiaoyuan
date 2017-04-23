@@ -21,13 +21,13 @@ Page({
         "content-type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
+        console.log('response of request loginZhiHuiClass register.php ------ ')
         console.log(res)
         if (res.data.res == "绑定成功") {
-
           wx.showToast({
             title: '绑定成功',
             icon: 'success',
-            duration: 2000
+            duration: 1000
           })
           wx.setStorageSync('username', e.detail.value.username)
 
@@ -89,6 +89,7 @@ Page({
   },
 
   onLoad: function () {
+    console.log('loginZhiHuiClass onLoad data')
     console.log(this.data)
 
   },

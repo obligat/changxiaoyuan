@@ -24,7 +24,9 @@ Page({
     })
   },
   onLoad: function () {
-    console.log('index  onload : ' + this.data.username)
+    console.log('index  onload : username: ' + this.data.username)
+    console.log('index onload :courseMessage : ')
+    console.log(this.data.courseMessage)
   },
   onShow() {
     if (!this.data.username && wx.getStorageSync('username')) {
@@ -49,7 +51,7 @@ Page({
           that.setData({
             courseMessage: wx.getStorageSync('courseMessage')
           })
-          console.log('index onload ----- courseMessage')
+          console.log('index onshow----- courseMessage')
           console.log(that.data.courseMessage)
         }
       })
