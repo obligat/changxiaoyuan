@@ -23,6 +23,36 @@ Page({
       searchInput: ''
     })
   },
+  handleBorrow() {
+
+    if (wx.getStorageSync('libInfo').username) {
+      wx.navigateTo({
+        url: '../borrow/borrow',
+        success: function (res) {
+          // success
+        },
+        fail: function (res) {
+          // fail
+        },
+        complete: function (res) {
+          // complete
+        }
+      })
+    } else {
+      wx.navigateTo({
+        url: '../loginLibrary/loginLibrary',
+        success: function (res) {
+          // success
+        },
+        fail: function (res) {
+          // fail
+        },
+        complete: function (res) {
+          // complete
+        }
+      })
+    }
+  },
   onLoad: function () {
     console.log('index  onload : username: ' + this.data.username)
     console.log('index onload :courseMessage : ')
