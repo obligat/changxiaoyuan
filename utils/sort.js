@@ -1,6 +1,6 @@
 
 function filterByWeekNum(rawArray) {
-    var array = new Array([], [], [], [], [])
+    var array = new Array([], [], [], [], [], [], [])
     for (var i = 0; i < rawArray.length; i++) {
         switch (rawArray[i].WEEKNUM) {
             case 1:
@@ -45,7 +45,7 @@ function formatWeek(sortResult) {
             sortResult[i].push({ num: day[i] })
         }
     }
-    if (weekDay != 0 && weekDay != 5) {
+    if (weekDay != 0 || weekDay != 5) {
         array = sortResult.concat(sortResult.splice(0, weekDay - 1))
     }
     return array;
