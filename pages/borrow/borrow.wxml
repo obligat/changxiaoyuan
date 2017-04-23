@@ -1,2 +1,14 @@
+
 <!--pages/borrow/borrow.wxml-->
-<text>pages/borrow/borrow.wxml</text>
+<view class="container">
+  <view class="sno">
+    <text>{{username}}</text>
+    <button>退出</button>
+  </view>
+  <view> 已借阅</view>
+  <view class="borrow-list">
+    <view class="book-name">bookname</view>
+    <button>xuejie</button>
+    <view class="borrow-time">time</view>
+  </view>
+</view>
