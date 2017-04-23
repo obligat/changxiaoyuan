@@ -1,2 +1,21 @@
+
 <!--pages/loginLibrary/loginLibrary.wxml-->
-<text>pages/loginLibrary/loginLibrary.wxml</text>
+<view class="container">
+  <view class="h2">登录图书馆系统</view>
+  <form bindsubmit="formSubmit">
+    <view class="input-box {{errorMsg?'red-line':''}}">
+      <input name="username" type="text" placeholder="学号" placeholder-class="input-placeholder" focus maxlength="9" value="{{username}}" bindinput="bindUsernameInput" />
+      <view class="icon-cancel {{username?'': 'hidden'}}" bindtap="clearUsernameInput">X</view>
+    </view>
+    <view class="input-box {{errorMsg?'red-line':''}}">
+      <input name="password" type="password" placeholder-class="input-placeholder" placeholder="密码" value="{{password}}" bindinput="bindPasswordInput" value="{{password}}" />
+      <view class="icon-cancel {{password ? '' : 'hidden'}}" bindtap="clearPasswordInput">X</view>
+    </view>
+    <view class="error-massage {{errorMsg?'':'hidden'}}">学号或密码错误</view>
+    <button class="btn-login" formType="submit">登录</button>
+  </form>
+  <view class="tips">
+    <text>*13、14级账号为S+学号，密码为123456</text>
+    <text>15、16级账号为学号，密码为学号后六位</text>
+  </view>
+</view>

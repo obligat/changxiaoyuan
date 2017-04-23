@@ -1,1 +1,7 @@
-{}
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "deepskyblue",
+    "navigationBarTitleText": "登录",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "deepskyblue"
+}

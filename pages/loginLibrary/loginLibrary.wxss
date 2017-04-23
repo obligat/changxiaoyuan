@@ -1,1 +1,15 @@
 /* pages/loginLibrary/loginLibrary.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20% 10%;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200rpx;
+  font-size: 28rpx;
+}
