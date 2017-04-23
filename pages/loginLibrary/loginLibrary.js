@@ -28,7 +28,7 @@ Page({
               wx.setStorageSync('libInfo', {
                 username: username,
                 password: password,
-                borrowInfo: res.data
+                borrowInfo: res.data.data
               })
             } catch (e) {
               console.log(e)
