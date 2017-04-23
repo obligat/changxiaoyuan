@@ -1,15 +1,14 @@
 {
   "pages": [
+    "pages/borrow/borrow",
+    "pages/loginLibrary/loginLibrary",
     "pages/index/index",
     "pages/usercenter/usercenter",
     "pages/loginZhiHuiClass/loginZhiHuiClass",
-    "pages/logs/logs",
     "pages/library/library",
-    "pages/borrow/borrow",
     "pages/bookList/bookList",
     "pages/bookDetail/bookDetail",
-    "pages/feedback/feedback",
-    "pages/loginLibrary/loginLibrary"
+    "pages/feedback/feedback"
   ],
   "window": {
     "backgroundTextStyle": "light",
