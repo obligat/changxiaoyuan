@@ -44,7 +44,34 @@ function weixinLogin() {
   })
 }
 
+function isSessionValid() {
+  
+  wx.request({
+    url: 'https://wwwxinle.cn/wechatapp/register.php',
+    data: {
+      session_3rd: wx.getStorageSync('session_3rd')
+    },
+    method: 'POST',
+    header: {
+      "content-type": "application/x-www-form-urlencoded"
+    },
+    success: function (res) {
+      // success
+      if (res.data.res == 'session已过期') {
+        weixinLogin()
+      }
+    },
+    fail: function (res) {
+      // fail
+    },
+    complete: function (res) {
+      // complete
+    }
+  })
+}
+
 module.exports = {
   weixinLogin,
+  isSessionValid,
   formatTime: formatTime
 }
