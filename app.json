@@ -12,10 +12,10 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "deepskyblue",
+    "navigationBarBackgroundColor": "#67d5ff",
     "navigationBarTitleText": "畅校园",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "deepskyblue"
+    "backgroundColor": "#f5f5f5"
   },
   "tabBar": {
     "list": [

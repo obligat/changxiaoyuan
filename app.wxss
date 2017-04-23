@@ -1,11 +1,12 @@
 /**app.wxss**/
 
 .container {
-  height: 1448rpx;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background: #f5f5f5;
 }
 
 .h1 {
@@ -14,6 +15,30 @@
 
 .h2 {
   font-size: 48rpx;
+}
+
+.h3 {
+  font-size: 40rpx;
+}
+
+.h4 {
+  font-size: 34rpx;
+}
+
+.h5 {
+  font-size: 28rpx;
+}
+
+.h6 {
+  font-size: 22rpx;
+}
+
+.main-font-color {
+  color: #353535;
+}
+
+.sub-font-color {
+  color: #95989a;
 }
 
 .hidden {
@@ -30,7 +55,6 @@
   color: #aaa;
 }
 
-
 .input-box {
   display: flex;
   border-bottom: 1px solid black;
@@ -41,14 +65,6 @@
   color: red;
   font-size: small;
   margin: -20rpx 40rpx 40rpx 40rpx;
-}
-
-.btn-login {
-  background: white;
-  padding: 0 50rpx;
-  width: 400rpx;
-  border: 1px solid #aaa;
-  border-radius: 50rpx;
 }
 
 .red-line {

@@ -10,7 +10,6 @@ Page({
   formSubmit: function (e) {
     console.log(e)
     var that = this
-    util.isSessionValid()
     wx.request({
       url: 'https://wwwxinle.cn/wechatapp/register.php',
       data: {
@@ -93,7 +92,7 @@ Page({
   onLoad: function () {
     console.log('loginZhiHuiClass onLoad data')
     console.log(this.data)
-
+    util.isSessionValid()
   },
   onReady: function () {
     // 页面渲染完成
