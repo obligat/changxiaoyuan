@@ -1,5 +1,6 @@
 // pages/loginZhiHuiClass/loginZhiHuiClass.js
 var app = getApp()
+var util = require('../../utils/util')
 Page({
   data: {
     username: '',
@@ -23,6 +24,9 @@ Page({
       success: function (res) {
         console.log('response of request loginZhiHuiClass register.php ------ ')
         console.log(res)
+        if (res.data.res == 'session 已过期') {
+          util.weixinLogin()
+        }
         if (res.data.res == "绑定成功") {
           wx.showToast({
             title: '绑定成功',
