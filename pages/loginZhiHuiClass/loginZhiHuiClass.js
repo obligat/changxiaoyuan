@@ -10,6 +10,7 @@ Page({
   formSubmit: function (e) {
     console.log(e)
     var that = this
+    util.isSessionValid()
     wx.request({
       url: 'https://wwwxinle.cn/wechatapp/register.php',
       data: {
@@ -24,9 +25,6 @@ Page({
       success: function (res) {
         console.log('response of request loginZhiHuiClass register.php ------ ')
         console.log(res)
-        if (res.data.res == 'session 已过期') {
-          util.weixinLogin()
-        }
         if (res.data.res == "绑定成功") {
           wx.showToast({
             title: '绑定成功',
