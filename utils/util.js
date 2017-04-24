@@ -16,6 +16,17 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function getIntervalDays(borrowDay) {
+  var today = new Date()
+  var borrowDay = new Date(borrowDay)
+  var todayTime = today.getTime()
+  var borrowDayTime = borrowDay.getTime()
+  var times = borrowDayTime - todayTime
+  var days = parseInt(times / (1000 * 60 * 60 * 24)) + 1
+  return days
+}
+
+
 function weixinLogin() {
   wx.login({
     success: function (res) {
@@ -45,7 +56,7 @@ function weixinLogin() {
 }
 
 function isSessionValid() {
-  
+
   wx.request({
     url: 'https://wwwxinle.cn/wechatapp/register.php',
     data: {
@@ -71,6 +82,7 @@ function isSessionValid() {
 }
 
 module.exports = {
+  getIntervalDays,
   weixinLogin,
   isSessionValid,
   formatTime: formatTime
