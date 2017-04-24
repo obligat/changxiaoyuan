@@ -28,7 +28,7 @@ Page({
               wx.setStorageSync('libInfo', {
                 username: username,
                 password: password,
-                borrowInfo: res.data.data
+                borrowInfo: res.data.book
               })
             } catch (e) {
               console.log(e)
@@ -105,5 +105,7 @@ Page({
   },
   onUnload: function () {
     // 页面关闭
+    console.log('loginLibrary onUnload:-----------')
+    console.log(wx.getStorageSync('libInfo'))
   }
 })

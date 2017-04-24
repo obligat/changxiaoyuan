@@ -1,7 +1,8 @@
 /* pages/usercenter/usercenter.wxss */
 
 .container {
-  background: #f9f9f9;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .userinfo {
