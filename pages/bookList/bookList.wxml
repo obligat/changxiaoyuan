@@ -14,7 +14,7 @@
     <view class="time-tip" wx:else>
       图书馆已闭馆（{{isWeekDay?'14:00 ':'8:00 '}}开馆）
     </view>
-    <view class="cancel-icon" bindtap="hiddenTip">x</view>
+    <image class="cancel-tip" bindtap="hiddenTip" src="../../images/cancel.png" mode="aspectFit"></image>
   </view>
   <view class="book-list">
     <block wx:for="{{books}}" wx:key="index">

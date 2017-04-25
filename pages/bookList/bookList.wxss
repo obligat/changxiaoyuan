@@ -35,13 +35,9 @@
   margin-left: 30rpx;
 }
 
-.cancel-icon {
-  border: 1px solid #95989a;
+.cancel-tip {
   width: 28rpx;
   height: 28rpx;
-  line-height: 20rpx;
-  text-align: center;
-  border-radius: 50%;
   right: 30rpx;
   position: absolute;
 }
