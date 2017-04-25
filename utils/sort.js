@@ -1,6 +1,6 @@
 
 function filterByWeekNum(rawArray) {
-    var array = new Array([], [], [], [], [], [], [])
+    var array = new Array([], [], [], [], [])
     for (var i = 0; i < rawArray.length; i++) {
         switch (rawArray[i].WEEKNUM) {
             case 1:
@@ -34,20 +34,41 @@ function sortByJT_NO(filterResult) {
 }
 
 
+
 function formatWeek(sortResult) {
     var array = new Array()
     var date = new Date()
     var weekDay = date.getDay()
-    var day = ["一", "二", "三", "四", "五"]
-
+    var day = [{
+        num: '一',
+        image: '../../images/Monday.png',
+        gradient: ['#32b8d5']
+    }, {
+        num: '二',
+        image: '../../images/Tuesday.png',
+        gradient: ['#32b8d5', '#29b5da']
+    }, {
+        num: '三',
+        image: '../../images/Wednesday.png',
+        gradient: ['#29b5da', '#16c5d5']
+    }, {
+        num: '四',
+        image: '../../images/Thursday.png',
+        gradient: ['#16c5d5', '#0ad9f1']
+    }, {
+        num: '五',
+        image: '../../images/Friday.png',
+        gradient: ['#0ad9f1', '#2af2fa']
+    }]
     for (var i = 0; i < day.length; i++) {
         if (sortResult[i]) {
-            sortResult[i].push({ num: day[i] })
+            sortResult[i].push(day[i])
         }
     }
-    if (weekDay != 0 || weekDay != 5) {
-        array = sortResult.concat(sortResult.splice(0, weekDay - 1))
-    }
+    // if (weekDay != 0 && weekDay != 5) {
+    //     array = sortResult.concat(sortResult.splice(0, weekDay - 1))
+    // }
+    array = sortResult
     return array;
 }
 

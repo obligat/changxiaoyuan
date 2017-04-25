@@ -7,13 +7,13 @@ Page({
     searchInput: '',
     opacity: 1,
     courseMessage: wx.getStorageSync('courseMessage') || '',
+    current: 0
   },
   handleKeyInput(e) {
     console.log(e)
     this.setData({
       searchInput: e.detail.value
     })
-
   },
 
   handConfirmSearch(e) {
@@ -50,6 +50,13 @@ Page({
     console.log('index  onload : username: ' + this.data.username)
     console.log('index onload :courseMessage : ')
     console.log(this.data.courseMessage)
+    var day = new Date()
+    var week = day.getDay()
+    if (week != 0 && week != 5) {
+      this.setData({
+        current: week - 1
+      })
+    }
   },
   onShow() {
     if (!this.data.username && wx.getStorageSync('username')) {
@@ -70,6 +77,8 @@ Page({
           var filterResult = sort.filterByWeekNum(res.data.Obj)
           var sortResult = sort.sortByJT_NO(filterResult)
           wx.setStorageSync('courseMessage', sort.formatWeek(sortResult))
+          console.log('test====')
+          console.log(sortResult)
           that.setData({
             courseMessage: wx.getStorageSync('courseMessage')
           })
