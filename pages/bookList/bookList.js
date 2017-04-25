@@ -78,7 +78,7 @@ Page({
   onLoad: function (options) {
     var that = this
     this.setData({
-      searchInput: options.words
+      searchInput: decodeURIComponent(options.words)
     })
     wx.request({
       url: 'https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + options.words,
