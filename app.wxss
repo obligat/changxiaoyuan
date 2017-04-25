@@ -6,6 +6,25 @@
   background: #f5f5f5;
 }
 
+.wrapper {
+  background: #67d5ff;
+  height: 100rpx;
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  background: #67d5ff;
+  color: #fff;
+  margin: 30rpx 20rpx 20rpx 20rpx;
+  padding: 0 10rpx;
+  font-size: 34rpx;
+}
+
+
 .h1 {
   font-size: 64rpx;
 }

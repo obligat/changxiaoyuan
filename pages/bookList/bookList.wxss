@@ -1,1 +1,46 @@
 /* pages/bookList/bookList.wxss */
+
+.container {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.icon-cancel {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 34rpx;
+}
+
+.input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 34rpx;
+}
+
+.time-wrapper {
+  margin: 32rpx 30rpx 48rpx 30rpx;
+  background: #fff;
+  width: 690rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
+  display: flex;
+  align-items: center;
+  color: #95989a;
+  position: relative;
+}
+
+.time-tip {
+  margin-left: 30rpx;
+}
+
+.cancel-icon {
+  border: 1px solid #95989a;
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 20rpx;
+  text-align: center;
+  border-radius: 50%;
+  right: 30rpx;
+  position: absolute;
+}

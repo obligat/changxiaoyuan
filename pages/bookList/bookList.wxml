@@ -1,2 +1,19 @@
+
 <!--pages/bookList/bookList.wxml-->
-<text>pages/bookList/bookList.wxml</text>
+<view class="container">
+  <view class="wrapper">
+    <view class="search-box">
+      <input placeholder="搜索图书" placeholder-class="input-placeholder" value="{{searchInput}}" bindinput="handleKeyInput" />
+      <view class="icon-cancel" style="opacity:{{searchInput?opacity:''}}" bindtap="clearSearchInput">X</view>
+    </view>
+  </view>
+  <view class="time-wrapper">
+    <view class="time-tip" wx:if="{{isOpenDoor}}">
+      图书馆正在开放（21:30 闭馆）
+    </view>
+    <view class="time-tip" wx:else>
+      图书馆已闭馆（{{isWeekDay?'14:00 ':'8:00 '}}开馆）
+    </view>
+    <view class="cancel-icon">x</view>
+  </view>
+</view>

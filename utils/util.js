@@ -26,6 +26,25 @@ function getIntervalDays(borrowDay) {
   return days
 }
 
+function isOpenDoor() {
+  var today = new Date()
+  var hour = today.getHours()
+  var minute = today.getMinutes()
+  var minutes = hour * 60 + minute
+  var bool = isWeekDay()
+  if (bool) {
+    return (minutes > 840 && minutes < 1290) ? true : false
+  } else {
+    return (minutes > 480 && minutes < 1290) ? true : false
+  }
+}
+
+function isWeekDay() {
+  var day = new Date()
+  var week = day.getDay()
+  return (week == 0 || week == 6) ? true : false
+}
+
 
 function weixinLogin() {
   wx.login({
@@ -82,6 +101,8 @@ function isSessionValid() {
 }
 
 module.exports = {
+  isWeekDay,
+  isOpenDoor,
   getIntervalDays,
   weixinLogin,
   isSessionValid,

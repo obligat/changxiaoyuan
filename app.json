@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/bookList/bookList",
     "pages/index/index",
     "pages/borrow/borrow",
     "pages/loginLibrary/loginLibrary",
     "pages/usercenter/usercenter",
     "pages/loginZhiHuiClass/loginZhiHuiClass",
     "pages/library/library",
-    "pages/bookList/bookList",
     "pages/bookDetail/bookDetail",
     "pages/feedback/feedback"
   ],

@@ -12,6 +12,24 @@ Page({
     this.setData({
       searchInput: e.detail.value
     })
+
+    // if (this.data.searchInput) {
+
+    //   wx.navigateTo({
+    //     url: '../bookList/bookList?words=' + 'this.data.searchInput',
+    //     success: function (res) {
+    //       // success
+    //     },
+    //     fail: function (res) {
+    //       // fail
+    //     },
+    //     complete: function (res) {
+    //       // complete
+    //     }
+    //   })
+    // }
+    
+
   },
   handleLogin() {
     wx.navigateTo({
