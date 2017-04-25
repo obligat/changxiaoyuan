@@ -3,7 +3,7 @@
 <view class="container">
   <view class="wrapper">
     <view class="search-box">
-      <input placeholder="搜索图书" placeholder-class="input-placeholder" value="{{searchInput}}" bindinput="handleKeyInput" />
+      <input placeholder="搜索图书" placeholder-class="input-placeholder" value="{{searchInput}}" bindinput="handleKeyInput" bindconfirm="handConfirmSearch" />
       <view class="icon-cancel" style="opacity:{{searchInput?opacity:''}}" bindtap="clearSearchInput">X</view>
     </view>
   </view>

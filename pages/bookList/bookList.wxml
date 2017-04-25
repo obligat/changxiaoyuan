@@ -7,13 +7,25 @@
       <view class="icon-cancel" style="opacity:{{searchInput?opacity:''}}" bindtap="clearSearchInput">X</view>
     </view>
   </view>
-  <view class="time-wrapper">
+  <view class="time-wrapper" animation="{{animationData}}">
     <view class="time-tip" wx:if="{{isOpenDoor}}">
       图书馆正在开放（21:30 闭馆）
     </view>
     <view class="time-tip" wx:else>
       图书馆已闭馆（{{isWeekDay?'14:00 ':'8:00 '}}开馆）
     </view>
-    <view class="cancel-icon">x</view>
+    <view class="cancel-icon" bindtap="hiddenTip">x</view>
+  </view>
+  <view class="book-list">
+    <block wx:for="{{books}}" wx:key="index">
+      <view class="book-item">
+        <image src=""></image>
+        <view class="book-info">
+          <view class="book-title main-font-color">{{item.title}}</view>
+          <view class="book-author h6 sub-font-color">{{item.author}}</view>
+          <view class="h6 sub-font-color">{{item.press}} / {{item.year}}</view>
+        </view>
+      </view>
+    </block>
   </view>
 </view>

@@ -45,6 +45,14 @@ function isWeekDay() {
   return (week == 0 || week == 6) ? true : false
 }
 
+function handleComma(str) {
+  str = str.split(',')
+  while (!str[str.length - 1]) {
+    str.pop()
+  }
+  str = str.join(' / ')
+  return str
+}
 
 function weixinLogin() {
   wx.login({
@@ -101,6 +109,7 @@ function isSessionValid() {
 }
 
 module.exports = {
+  handleComma,
   isWeekDay,
   isOpenDoor,
   getIntervalDays,

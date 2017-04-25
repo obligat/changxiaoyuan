@@ -9,27 +9,20 @@ Page({
     courseMessage: wx.getStorageSync('courseMessage') || '',
   },
   handleKeyInput(e) {
+    console.log(e)
     this.setData({
       searchInput: e.detail.value
     })
 
-    // if (this.data.searchInput) {
+  },
 
-    //   wx.navigateTo({
-    //     url: '../bookList/bookList?words=' + 'this.data.searchInput',
-    //     success: function (res) {
-    //       // success
-    //     },
-    //     fail: function (res) {
-    //       // fail
-    //     },
-    //     complete: function (res) {
-    //       // complete
-    //     }
-    //   })
-    // }
-    
-
+  handConfirmSearch(e) {
+    var words = e.detail.value
+    if (words) {
+      wx.navigateTo({
+        url: '../bookList/bookList?words=' + encodeURIComponent(words)
+      })
+    }
   },
   handleLogin() {
     wx.navigateTo({
@@ -45,29 +38,11 @@ Page({
 
     if (wx.getStorageSync('libInfo').username) {
       wx.navigateTo({
-        url: '../borrow/borrow',
-        success: function (res) {
-          // success
-        },
-        fail: function (res) {
-          // fail
-        },
-        complete: function (res) {
-          // complete
-        }
+        url: '../borrow/borrow'
       })
     } else {
       wx.navigateTo({
-        url: '../loginLibrary/loginLibrary',
-        success: function (res) {
-          // success
-        },
-        fail: function (res) {
-          // fail
-        },
-        complete: function (res) {
-          // complete
-        }
+        url: '../loginLibrary/loginLibrary'
       })
     }
   },
@@ -92,22 +67,18 @@ Page({
           "content-type": "application/x-www-form-urlencoded"
         },
         success: function (res) {
-          console.log(res)
           var filterResult = sort.filterByWeekNum(res.data.Obj)
           var sortResult = sort.sortByJT_NO(filterResult)
           wx.setStorageSync('courseMessage', sort.formatWeek(sortResult))
           that.setData({
             courseMessage: wx.getStorageSync('courseMessage')
           })
-          console.log('index onshow----- courseMessage')
-          console.log(that.data.courseMessage)
         }
       })
     } else if (this.data.username && !wx.getStorageSync('username')) {
       this.setData({
         username: ''
       })
-      console.log('index onshow: ' + this.data.username)
     }
   }
 })

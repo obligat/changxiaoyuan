@@ -28,6 +28,7 @@
   align-items: center;
   color: #95989a;
   position: relative;
+  transition: height 1s;
 }
 
 .time-tip {
@@ -43,4 +44,39 @@
   border-radius: 50%;
   right: 30rpx;
   position: absolute;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  margin: 0 30rpx 56rpx 30rpx;
+}
+
+.book-item image {
+  width: 130rpx;
+  height: 150rpx;
+  border: 1px solid black;
+  margin-right: 30rpx;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  width: 530rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 34rpx;
+}
+
+.book-author {
+  margin: 16rpx 0;
 }
