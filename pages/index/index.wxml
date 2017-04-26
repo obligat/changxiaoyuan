@@ -23,13 +23,13 @@
       </view>
     </view>
     <block wx:else>
-      <swiper current="{{current}}">
+      <swiper current="{{current}}" bindchange="handleSwiper">
         <block wx:for="{{courseMessage}}" wx:for-item="week" wx:for-index="day" wx:key="num">
           <swiper-item>
             <view class="swiper-item">
-              <view class="table-head" style="background:linear-gradient(30deg,{{week[4].gradient[0]}},{{week[4].gradient[1]?week[4].gradient[1]:'#32b8d5'}});">
-                <image src="{{week[4].image}}" mode="aspectFit"></image>
-                <view class="week-num">星期{{week[4].num}}</view>
+              <view class="table-head" style="background:linear-gradient(30deg,{{current?gradients[current-1]:'#32b8d5'}},{{gradients[current]}});">
+                <image src="{{images[current]}}" mode="aspectFit"></image>
+                <view class="week-num">星期{{weekNum[current]}}</view>
               </view>
               <view class="table-body">
                 <block wx:for="{{week}}" wx:key="">

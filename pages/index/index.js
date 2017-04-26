@@ -7,7 +7,10 @@ Page({
     searchInput: '',
     opacity: 1,
     courseMessage: wx.getStorageSync('courseMessage') || '',
-    current: 0
+    current: 0,
+    weekNum: ['一', '二', '三', '四', '五'],
+    images: ['../../images/Monday.png', '../../images/Tuesday.png', '../../images/Wednesday.png', '../../images/Thursday.png', '../../images/Friday.png'],
+    gradients: ['#32b8d5', '#29b5da', '#16c5d5', '#0ad9f1', '#2af2fa']
   },
   handleKeyInput(e) {
     console.log(e)
@@ -35,7 +38,6 @@ Page({
     })
   },
   handleBorrow() {
-
     if (wx.getStorageSync('libInfo').username) {
       wx.navigateTo({
         url: '../borrow/borrow'
@@ -46,10 +48,12 @@ Page({
       })
     }
   },
+  handleSwiper(e) {
+    this.setData({
+      current: e.detail.current
+    })
+  },
   onLoad: function () {
-    console.log('index  onload : username: ' + this.data.username)
-    console.log('index onload :courseMessage : ')
-    console.log(this.data.courseMessage)
     var day = new Date()
     var week = day.getDay()
     if (week != 0 && week != 5) {
@@ -76,9 +80,7 @@ Page({
         success: function (res) {
           var filterResult = sort.filterByWeekNum(res.data.Obj)
           var sortResult = sort.sortByJT_NO(filterResult)
-          wx.setStorageSync('courseMessage', sort.formatWeek(sortResult))
-          console.log('test====')
-          console.log(sortResult)
+          wx.setStorageSync('courseMessage', sortResult)
           that.setData({
             courseMessage: wx.getStorageSync('courseMessage')
           })
