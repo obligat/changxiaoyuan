@@ -95,6 +95,9 @@ Page({
     }
   },
   onLoad: function (options) {
+    wx.showLoading({
+      title: 'loading...'
+    })
     var that = this
     this.setData({
       searchInput: decodeURIComponent(options.words)
@@ -104,6 +107,7 @@ Page({
       data: {},
       method: 'GET',
       success: function (res) {
+        wx.hideLoading()
         if (res.data.books.length) {
           res.data.books.forEach(function (item) {
             item.author = util.handleComma(item.author)
