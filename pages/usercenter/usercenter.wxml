@@ -11,7 +11,7 @@
   </view>
   <navigator url="../feedback/feedback" class="feedback">
     <text>反馈 </text>
-    <text class="right-arrow">></text>
+    <image class="right-arrow" src="../../images/more.png"></image>
   </navigator>
   <button class="btn-logout {{username ? '': 'hidden'}}" bindtap="logout">注销</button>
 </view>

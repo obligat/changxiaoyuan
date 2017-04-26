@@ -46,11 +46,13 @@ function isWeekDay() {
 }
 
 function handleComma(str) {
-  str = str.split(',')
-  while (!str[str.length - 1]) {
-    str.pop()
+  if (str) {
+    str = str.split(',')
+    while (!str[str.length - 1]) {
+      str.pop()
+    }
+    str = str.join(' / ')
   }
-  str = str.join(' / ')
   return str
 }
 

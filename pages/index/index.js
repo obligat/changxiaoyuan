@@ -25,6 +25,8 @@ Page({
       wx.navigateTo({
         url: '../bookList/bookList?words=' + encodeURIComponent(words)
       })
+      console.log('lalalalallalal')
+      console.log(encodeURIComponent(words))
     }
   },
   handleLogin() {

@@ -24,6 +24,12 @@ Page({
       success: function (res) {
         console.log('response of request loginZhiHuiClass register.php ------ ')
         console.log(res)
+        if (res.data.res == "该账号已绑定") {
+          wx.showToast({
+            title: res.data.res,
+            duration:1000
+          })
+        }
         if (res.data.res == "绑定成功") {
           wx.showToast({
             title: '绑定成功',

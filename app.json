@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/usercenter/usercenter",
     "pages/bookList/bookList",
     "pages/borrow/borrow",
     "pages/loginLibrary/loginLibrary",
-    "pages/usercenter/usercenter",
     "pages/loginZhiHuiClass/loginZhiHuiClass",
     "pages/library/library",
     "pages/bookDetail/bookDetail",
