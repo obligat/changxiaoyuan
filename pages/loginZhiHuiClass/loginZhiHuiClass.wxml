@@ -1,5 +1,6 @@
 
 <!--pages/loginZhiHuiClass/loginZhiHuiClass.wxml-->
+<import src="../../src/wetoast/wetoast.wxml" />
 <view class="container">
   <view class="h2">登录智慧教室系统</view>
   <form bindsubmit="formSubmit">
@@ -15,3 +16,4 @@
     <button class="btn-login" formType="submit">登录</button>
   </form>
 </view>
+<template is="wetoast" data="{{...__wetoast__}}" />

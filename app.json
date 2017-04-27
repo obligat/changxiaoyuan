@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/bookList/bookList",
     "pages/index/index",
     "pages/usercenter/usercenter",
-    "pages/bookList/bookList",
     "pages/borrow/borrow",
     "pages/loginLibrary/loginLibrary",
     "pages/loginZhiHuiClass/loginZhiHuiClass",

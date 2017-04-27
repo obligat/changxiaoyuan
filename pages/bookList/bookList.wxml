@@ -1,5 +1,6 @@
 
 <!--pages/bookList/bookList.wxml-->
+<import src="../../src/wetoast/wetoast.wxml" />
 <view class="container">
   <view class="wrapper">
     <view class="search-box">
@@ -7,7 +8,7 @@
       <view class="icon-cancel" style="opacity:{{searchInput?opacity:''}}" bindtap="clearSearchInput">X</view>
     </view>
   </view>
-  <view class="time-wrapper" animation="{{animationData}}">
+  <view class="time-wrapper {{animationData?'hidden-margin-bottom':''}}" animation="{{animationData}}">
     <view class="time-tip" wx:if="{{isOpenDoor}}">
       图书馆正在开放（21:30 闭馆）
     </view>
@@ -21,11 +22,12 @@
       <view class="book-item">
         <image src=""></image>
         <view class="book-info">
-          <view class="book-title main-font-color">{{item.title}}</view>
-          <view class="book-author h6 sub-font-color">{{item.author}}</view>
-          <view class="h6 sub-font-color">{{item.press}} / {{item.year}}</view>
+          <text class="book-title main-font-color" selectable="true">{{item.title}}</text>
+          <text class="book-author h6 sub-font-color" selectable="true">{{item.author}}</text>
+          <text class="h6 sub-font-color" selectable="true">{{item.press}} / {{item.year}}</text>
         </view>
       </view>
     </block>
   </view>
 </view>
+<template is="wetoast" data="{{...__wetoast__}}" />

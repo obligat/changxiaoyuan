@@ -1,6 +1,8 @@
 //app.js
 var util = require('utils/util')
+var {WeToast} = require('src/wetoast/wetoast.js')
 App({
+  WeToast,
   onLaunch: function () {
     var that = this
     wx.getSystemInfo({

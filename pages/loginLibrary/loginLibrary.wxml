@@ -1,5 +1,6 @@
 
 <!--pages/loginLibrary/loginLibrary.wxml-->
+<import src="../../src/wetoast/wetoast.wxml" />
 <view class="container">
   <view class="h2">登录图书馆系统</view>
   <form bindsubmit="formSubmit">

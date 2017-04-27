@@ -7,13 +7,13 @@
 
 .input-placeholder {
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.4;
   font-size: 34rpx;
 }
 
 .icon-cancel {
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.4;
   font-size: 34rpx;
 }
 

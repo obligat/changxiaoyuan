@@ -1,5 +1,6 @@
 // pages/bookList/bookList.js
 var util = require('../../utils/util')
+var app = getApp()
 Page({
   data: {
     searchInput: '',
@@ -7,7 +8,7 @@ Page({
     timeTip: '',
     isOpenDoor: false,
     isWeekDay: false,
-    animationData: {},
+    animationData: '',
     books: [],
     page: 1,
     allPages: 0,
@@ -19,12 +20,14 @@ Page({
     })
     var keyword = e.detail.value
     var that = this
+    console.log('https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + encodeURIComponent(keyword))
     if (keyword) {
       wx.request({
         url: 'https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + encodeURIComponent(keyword),
         data: {},
         method: 'GET',
         success: function (res) {
+          console.log(res)
           if (res.data.books.length) {
             res.data.books.forEach(function (item) {
               item.author = util.handleComma(item.author)
@@ -48,6 +51,7 @@ Page({
     this.setData({
       animationData: animation.export()
     })
+    console.log(this.data.animationData)
   },
   clearSearchInput() {
     this.setData({
@@ -86,13 +90,16 @@ Page({
         }
       })
     } else {
-      wx.showToast({
-        title: '总共' + this.data.all + '条记录，您都看完了',
+      this.wetoast.toast({
+        title: '总共 ' + this.data.all + ' 条记录，您都看完啦',
         duration: 2000
       })
     }
   },
   onLoad: function (options) {
+    console.log('ooooooooooooooo')
+    console.log(this.data)
+    new app.WeToast()
     wx.showLoading({
       title: 'loading...'
     })
@@ -100,12 +107,14 @@ Page({
     this.setData({
       searchInput: decodeURIComponent(options.words)
     })
+    console.log('https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + options.words)
     wx.request({
       url: 'https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + options.words,
       data: {},
       method: 'GET',
       success: function (res) {
         wx.hideLoading()
+        console.log(res)
         if (res.data.books.length) {
           res.data.books.forEach(function (item) {
             item.author = util.handleComma(item.author)
@@ -118,8 +127,8 @@ Page({
           })
 
         } else {
-          wx.showToast({
-            title: '没有您要找的书',
+          that.wetoast.toast({
+            title: '没有找到您要找的书',
             duration: 2000
           })
           that.setData({

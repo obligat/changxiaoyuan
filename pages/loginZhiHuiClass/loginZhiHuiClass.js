@@ -25,9 +25,9 @@ Page({
         console.log('response of request loginZhiHuiClass register.php ------ ')
         console.log(res)
         if (res.data.res == "该账号已绑定") {
-          wx.showToast({
-            title: res.data.res,
-            duration:1000
+          that.wetoast.toast({
+            title: '该账号已绑定',
+            duration: 2000
           })
         }
         if (res.data.res == "绑定成功") {
@@ -58,8 +58,8 @@ Page({
             errorMsg: res.data.mid_res
           })
         } if (res.data.res == "绑定失败") {
-          wx.showToast({
-            title: '绑定失败',
+          that.wetoast.toast({
+            title: '该微信号已被绑定',
             duration: 2000
           })
         }
@@ -99,6 +99,7 @@ Page({
     console.log('loginZhiHuiClass onLoad data')
     console.log(this.data)
     util.isSessionValid()
+    new app.WeToast()
   },
   onReady: function () {
     // 页面渲染完成
