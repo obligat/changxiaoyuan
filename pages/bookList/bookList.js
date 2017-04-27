@@ -20,7 +20,6 @@ Page({
     })
     var keyword = e.detail.value
     var that = this
-    console.log('https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + encodeURIComponent(keyword))
     if (keyword) {
       wx.request({
         url: 'https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + encodeURIComponent(keyword),
@@ -75,8 +74,6 @@ Page({
         method: 'GET',
         success: function (res) {
           wx.hideLoading()
-          console.log('onreachbottom ====')
-          console.log(res.data)
           res.data.books.forEach(function (item) {
             item.author = util.handleComma(item.author)
             return item
@@ -86,7 +83,6 @@ Page({
             page: res.data.nowpage,
             searchInput: keyword
           })
-          console.log(that.data)
         }
       })
     } else {
@@ -97,8 +93,6 @@ Page({
     }
   },
   onLoad: function (options) {
-    console.log('ooooooooooooooo')
-    console.log(this.data)
     new app.WeToast()
     wx.showLoading({
       title: 'loading...'
@@ -107,7 +101,6 @@ Page({
     this.setData({
       searchInput: decodeURIComponent(options.words)
     })
-    console.log('https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + options.words)
     wx.request({
       url: 'https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + options.words,
       data: {},
