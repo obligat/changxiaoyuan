@@ -10,7 +10,8 @@ Page({
     animationData: {},
     books: [],
     page: 1,
-    allPages: 0
+    allPages: 0,
+    all: 0
   },
   handleKeyInput(e) {
     this.setData({
@@ -33,15 +34,13 @@ Page({
               books: res.data.books,
               page: res.data.nowpage,
               searchInput: keyword,
-              allPages: res.data.allpage
+              allPages: res.data.allpage,
+              all: res.data.all
             })
           }
         }
       })
     }
-  },
-  handConfirmSearch(e) {
-
   },
   hiddenTip() {
     var animation = wx.createAnimation()
@@ -67,7 +66,7 @@ Page({
         page: page
       })
       wx.request({
-        url: 'https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + keyword + '&page=' + page,
+        url: 'https://libapi.changxiaoyuan.com/index.php?do=search&keyword=' + encodeURIComponent(keyword) + '&page=' + page,
         data: {},
         method: 'GET',
         success: function (res) {
@@ -87,9 +86,8 @@ Page({
         }
       })
     } else {
-      console.log('总共' + this.data.allPages + '条记录，您都看完了')
       wx.showToast({
-        title: '总共' + this.data.allPages + '条记录，您都看完了',
+        title: '总共' + this.data.all + '条记录，您都看完了',
         duration: 2000
       })
     }
@@ -115,7 +113,8 @@ Page({
           })
           that.setData({
             books: res.data.books,
-            allPages: res.data.allpage
+            allPages: res.data.allpage,
+            all: res.data.all
           })
 
         } else {
@@ -127,17 +126,10 @@ Page({
             searchInput: ''
           })
         }
-      },
-      fail: function () {
-        console.log('fail')
-      },
-      complete: function () {
-        console.log('complete')
       }
     })
   },
   onShow: function () {
-    console.log('list onshow ===================')
     var boolean = util.isOpenDoor()
     var isWeekDay = util.isWeekDay()
     if (boolean) {
