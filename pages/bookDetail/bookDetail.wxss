@@ -1,1 +1,67 @@
 /* pages/bookDetail/bookDetail.wxss */
+
+.container {
+  padding: 32rpx 30rpx;
+  height: 100%;
+  position: relative;
+}
+
+.head-card {
+  background: #fff;
+  margin-bottom: 48rpx;
+  display: flex;
+  border-radius: 8rpx;
+  box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
+}
+
+.head-card image {
+  height: 200rpx;
+  width: 160rpx;
+  border: 2rpx solid black;
+  margin: 20rpx;
+}
+
+.head-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.head-card-title {
+  margin: 20rpx auto 24rpx 0;
+}
+
+.author {
+  margin-bottom: 24rpx;
+}
+
+.search-id {
+  width: 278rpx;
+}
+
+.head-card-content > view:nth-child(4) {
+  display: flex;
+  align-items: center;
+  margin-top: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.press {
+  margin-bottom: 48rpx;
+}
+
+.press > view:nth-child(1) {
+  line-height: 40rpx;
+}
+
+.summary {
+  line-height: 40rpx;
+}
+
+.summary-contant {
+  display: flex;
+  flex-direction: column;
+}
+
+.p {
+  margin-bottom: 40rpx;
+}

@@ -21,11 +21,11 @@
     <block wx:for="{{books}}" wx:key="index">
       <view class="book-item">
         <image src=""></image>
-        <view class="book-info">
+        <navigator url="../bookDetail/bookDetail?title={{item.title}}&author={{item.author}}&searchId={{item.searchId}}&on={{item.on}}&allNum={{item.allNum}}&year={{item.year}}&press={{item.press}}" class="book-info">
           <text class="book-title main-font-color" selectable="true">{{item.title}}</text>
           <text class="book-author h6 sub-font-color" selectable="true">{{item.author}}</text>
           <text class="h6 sub-font-color" selectable="true">{{item.press}} / {{item.year}}</text>
-        </view>
+        </navigator>
       </view>
     </block>
   </view>

@@ -1,2 +1,27 @@
+
 <!--pages/bookDetail/bookDetail.wxml-->
-<text>pages/bookDetail/bookDetail.wxml</text>
+<view class="container sub-font-color">
+  <view class="head-card">
+    <image src=""></image>
+    <view class="head-card-content h6">
+      <text class="head-card-title main-font-color h5">{{bookDetail.title}}
+      </text>
+      <text class="author">{{bookDetail.author}}</text>
+      <view>长安校区：共 {{bookDetail.allNum}} 本， {{bookDetail.on}} 本可借</view>
+      <view>
+        <text class="search-id">{{bookDetail.searchId}}</text>
+        <view class="shuku">{{shuku}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="press h5">
+    <view>出版社：</view>
+    <text>{{bookDetail.press}}</text>
+  </view>
+  <view class="summary h5">
+    <view>简介：</view>
+    <view class="summary-contant">
+      <view class="p" wx:for="{{summary}}">{{item}}</view>
+    </view>
+  </view>
+</view>

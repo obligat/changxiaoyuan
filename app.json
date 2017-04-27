@@ -1,13 +1,13 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/bookDetail/bookDetail",
     "pages/loginZhiHuiClass/loginZhiHuiClass",
     "pages/loginLibrary/loginLibrary",
     "pages/bookList/bookList",
     "pages/usercenter/usercenter",
     "pages/borrow/borrow",
     "pages/library/library",
-    "pages/bookDetail/bookDetail",
     "pages/feedback/feedback"
   ],
   "window": {

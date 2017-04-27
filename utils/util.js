@@ -16,6 +16,26 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function judgeShuKu(searchId) {
+  searchId = searchId.trim()
+  switch (true) {
+    case /^t/i.test(searchId):
+      return '计算机通信书库'
+    case /^[xrnso]/i.test(searchId):
+      return '数理书库'
+    case /^h/i.test(searchId):
+      return '外文书库'
+    case /^f/i.test(searchId):
+      return '经济管理书库'
+    case /^i/i.test(searchId):
+      return '文艺书库'
+    case /^[abcdegjk]/i.test(searchId):
+      return '社科书库'
+    default:
+      return ''
+  }
+}
+
 function getIntervalDays(borrowDay) {
   var today = new Date()
   var borrowDay = new Date(borrowDay)
@@ -111,6 +131,7 @@ function isSessionValid() {
 }
 
 module.exports = {
+  judgeShuKu,
   handleComma,
   isWeekDay,
   isOpenDoor,
