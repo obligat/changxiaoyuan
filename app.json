@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/bookList/bookList",
     "pages/index/index",
+    "pages/loginZhiHuiClass/loginZhiHuiClass",
+    "pages/loginLibrary/loginLibrary",
+    "pages/bookList/bookList",
     "pages/usercenter/usercenter",
     "pages/borrow/borrow",
-    "pages/loginLibrary/loginLibrary",
-    "pages/loginZhiHuiClass/loginZhiHuiClass",
     "pages/library/library",
     "pages/bookDetail/bookDetail",
     "pages/feedback/feedback"
@@ -18,14 +18,21 @@
     "backgroundColor": "#f5f5f5"
   },
   "tabBar": {
+    "selectedColor": "#67d5ff",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "images/home_inactive.png",
+        "selectedIconPath": "images/home.png"
       },
       {
         "pagePath": "pages/usercenter/usercenter",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "images/mine_inactive.png",
+        "selectedIconPath": "images/mine.png"
       }
     ]
   }

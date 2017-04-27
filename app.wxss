@@ -74,20 +74,34 @@
 
 .input-placeholder {
   color: #aaa;
+  font-size: 28rpx;
 }
 
 .input-box {
   display: flex;
-  border-bottom: 1px solid black;
-  margin: 40rpx;
+  border-bottom: 2rpx solid black;
+  margin-top: 48rpx;
+  padding: 0 10rpx;
 }
 
 .error-massage {
   color: red;
   font-size: small;
-  margin: -20rpx 40rpx 40rpx 40rpx;
+  margin-top: 10rpx;
+  padding-left: 10rpx;
 }
 
 .red-line {
   border-bottom: 1px solid red;
+}
+
+.btn-login {
+  width: 320rpx;
+  height: 70rpx;
+  margin-top: 160rpx;
+  margin-bottom: 80rpx;
+  color: #fff;
+  background: rgba(103, 213, 255, 0.8);
+  line-height: 70rpx;
+  border-radius: 50rpx;
 }

@@ -15,8 +15,7 @@ Page({
       wx.request({
         url: 'https://libapi.changxiaoyuan.com/index.php?do=user&username=' + username + '&password=' + password,
         data: {},
-        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        // header: {}, // 设置请求的 header
+        method: 'GET',
         success: function (res) {
           console.log(res)
           if (res.data.msg) {
@@ -27,8 +26,7 @@ Page({
             try {
               wx.setStorageSync('libInfo', {
                 username: username,
-                password: password,
-                borrowInfo: res.data.book
+                password: password
               })
             } catch (e) {
               console.log(e)
@@ -40,26 +38,10 @@ Page({
             })
             setTimeout(function () {
               wx.redirectTo({
-                url: '../borrow/borrow',
-                success: function (res) {
-                  // success
-                },
-                fail: function (res) {
-                  // fail
-                },
-                complete: function (res) {
-                  // complete
-                }
+                url: '../borrow/borrow'
               })
             }, 1000)
           }
-        },
-        fail: function (res) {
-          // fail
-          console.log('login lib fail.')
-        },
-        complete: function (res) {
-          // complete
         }
       })
     }
@@ -90,22 +72,5 @@ Page({
       password: '',
       errorMsg: ''
     })
-  },
-  onLoad: function (options) {
-    // 页面初始化 options为页面跳转所带来的参数
-  },
-  onReady: function () {
-    // 页面渲染完成
-  },
-  onShow: function () {
-    // 页面显示
-  },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
-    console.log('loginLibrary onUnload:-----------')
-    console.log(wx.getStorageSync('libInfo'))
   }
 })

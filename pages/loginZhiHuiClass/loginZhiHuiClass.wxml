@@ -2,7 +2,7 @@
 <!--pages/loginZhiHuiClass/loginZhiHuiClass.wxml-->
 <import src="../../src/wetoast/wetoast.wxml" />
 <view class="container">
-  <view class="h2">登录智慧教室系统</view>
+  <view class="h3">登录智慧教室系统</view>
   <form bindsubmit="formSubmit">
     <view class="input-box {{errorMsg?'red-line':''}}">
       <input name="username" type="number" placeholder="学号" placeholder-class="input-placeholder" focus maxlength="8" value="{{username}}" bindinput="bindUsernameInput" />

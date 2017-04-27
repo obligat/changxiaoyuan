@@ -34,6 +34,10 @@
   font-size: 26rpx;
 }
 
+.bind-account navigator {
+  color: #67d5ff;
+}
+
 .feedback {
   display: flex;
   align-items: center;
