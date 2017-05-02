@@ -19,14 +19,14 @@
   </view>
   <view class="book-list">
     <block wx:for="{{books}}" wx:key="index">
-      <view class="book-item">
+      <navigator url="../bookDetail/bookDetail?title={{item.title}}&author={{item.author}}&searchId={{item.searchId}}&on={{item.on}}&allNum={{item.allNum}}&year={{item.year}}&press={{item.press}}" class="book-item">
         <image src=""></image>
-        <navigator url="../bookDetail/bookDetail?title={{item.title}}&author={{item.author}}&searchId={{item.searchId}}&on={{item.on}}&allNum={{item.allNum}}&year={{item.year}}&press={{item.press}}" class="book-info">
+        <view class="book-info">
           <text class="book-title main-font-color" selectable="true">{{item.title}}</text>
           <text class="book-author h6 sub-font-color" selectable="true">{{item.author}}</text>
           <text class="h6 sub-font-color" selectable="true">{{item.press}} / {{item.year}}</text>
-        </navigator>
-      </view>
+        </view>
+      </navigator>
     </block>
   </view>
 </view>

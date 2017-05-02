@@ -12,7 +12,7 @@
       <input name="password" type="password" placeholder-class="input-placeholder" placeholder="密码" value="{{password}}" bindinput="bindPasswordInput" value="{{password}}" />
       <view class="icon-cancel {{password ? '' : 'hidden'}}" bindtap="clearPasswordInput">X</view>
     </view>
-    <view class="error-massage {{errorMsg?'':'hidden'}}">学号或密码错误</view>
+    <view class="error-massage {{errorMsg?'':'hidden'}}">账号或密码错误</view>
     <button class="btn-login" formType="submit">登录</button>
   </form>
   <view class="tips sub-font-color">

@@ -81,7 +81,7 @@
 .book-author {
   margin: 16rpx 0;
 }
- 
+
 .com-widget-goTop {
   position: fixed;
   bottom: 125px;
