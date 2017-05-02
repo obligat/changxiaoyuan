@@ -1,1 +1,44 @@
 /* pages/feedback/feedback.wxss */
+
+.textarea-box {
+  width: 630rpx;
+  min-height: 380rpx;
+  max-height: auto;
+  background: #fff;
+  border: 1px solid beige;
+  margin: 32rpx 30rpx 0 30rpx;
+  box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
+  border-radius: 10rpx;
+  padding: 32rpx 30rpx;
+  line-height: 80rpx;
+}
+
+button {
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+  margin-top: -60rpx;
+  margin-left: 70%;
+  background-size: cover;
+  border-radius: 50%;
+  background-image: url(../../images/send.png);
+  box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
+}
+
+button:focus {
+  background-image: url(../../images/send.png);
+}
+
+.wetoast__bd {
+  width: 360rpx;
+  height: 160rpx;
+  bottom: 700rpx;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
+}
+
+.wetoast__bd__title {
+  margin: 3px 0;
+  color: #353535;
+  font-size: 36rpx;
+}
