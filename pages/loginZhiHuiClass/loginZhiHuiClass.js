@@ -96,8 +96,6 @@ Page({
   },
 
   onLoad: function () {
-    console.log('loginZhiHuiClass onLoad data')
-    console.log(this.data)
     util.isSessionValid()
     new app.WeToast()
   },

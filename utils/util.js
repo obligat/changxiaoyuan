@@ -91,7 +91,6 @@ function weixinLogin() {
           },
           success: function (res) {
             wx.setStorageSync('session_3rd', res.data.session_3rd)
-            console.log('now request session_3rd is  ' + wx.getStorageSync('session_3rd'))
           },
           fail: function (res) {
             console.log('request session_3rd failed.')
@@ -116,16 +115,9 @@ function isSessionValid() {
       "content-type": "application/x-www-form-urlencoded"
     },
     success: function (res) {
-      // success
       if (res.data.res == 'session已过期') {
         weixinLogin()
       }
-    },
-    fail: function (res) {
-      // fail
-    },
-    complete: function (res) {
-      // complete
     }
   })
 }

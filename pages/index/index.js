@@ -1,12 +1,13 @@
 //index.js
 var app = getApp()
 var sort = require('../../utils/sort')
+var util = require('../../utils/util')
 Page({
   data: {
-    username: wx.getStorageSync('username') || '',
+    username: '',
     searchInput: '',
     opacity: 1,
-    courseMessage: wx.getStorageSync('courseMessage') || '',
+    courseMessage: '',
     current: 0,
     weekNum: ['一', '二', '三', '四', '五'],
     images: ['../../images/Monday.png', '../../images/Tuesday.png', '../../images/Wednesday.png', '../../images/Thursday.png', '../../images/Friday.png'],
@@ -54,9 +55,15 @@ Page({
     })
   },
   onLoad: function () {
+    util.isSessionValid()
+    this.setData({
+      username: wx.getStorageSync('username'),
+      courseMessage: wx.getStorageSync('courseMessage')
+    })
+
     var day = new Date()
     var week = day.getDay()
-    if (week != 0 && week != 5) {
+    if (week != 0 && week != 6) {
       this.setData({
         current: week - 1
       })
