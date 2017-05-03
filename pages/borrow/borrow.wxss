@@ -67,6 +67,13 @@
   margin: 32rpx 0;
 }
 
+.borrow-info-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 450rpx;
+}
+
 .btn-renew, .btn-not-renew {
   background: #67d5ff;
   right: 0;

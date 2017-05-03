@@ -14,20 +14,24 @@
 }
 
 button {
-  width: 120rpx;
-  height: 120rpx;
+  width: 90rpx;
+  height: 90rpx;
   position: relative;
-  margin-top: -60rpx;
-  margin-left: 70%;
+  margin-top: -50rpx;
+  margin-left: 75%;
   border-radius: 50%;
   box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
 }
 
 image {
-  width: 120rpx;
-  height: 120rpx;
+  width: 90rpx;
+  height: 90rpx;
   left: 0;
   position: absolute;
+}
+
+.grey-image {
+  filter: grayscale(100%);
 }
 
 .wetoast__bd {

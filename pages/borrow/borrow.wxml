@@ -10,7 +10,7 @@
     <block wx:for="{{borrowInfo}}" wx:key="{{index}}">
       <view class="borrow-list-item">
         <view class="borrow-info">
-          <text class="main-font-color">{{item.title}}</text>
+          <text class="main-font-color borrow-info-title">{{item.title}}</text>
           <button class="{{item.renew?'btn-renew':'btn-not-renew'}}" data-bookid="{{item.bookid}}" bindtap="{{item.renew?'handleRenew':''}}">
             {{item.renew?'续借':'不可续借'}}</button>
         </view>

@@ -5,7 +5,7 @@
   <form bindsubmit="bindFormSubmit">
     <textarea class="textarea-box main-font-color " bindinput="bindInput" name="textarea" placeholder-class="sub-font-color" maxlength="-1" auto-height value="{{inputValue}}" placeholder="把你对小畅的吐槽写下来吧" />
     <button form-type="submit">
-      <image src="{{inputValue?'../../images/send.png':'../../images/send_disabled.png'}}"></image>
+      <image src="../../images/send.png" class="{{inputValue?'':'grey-image'}}"></image>
     </button>
   </form>
 </view>
