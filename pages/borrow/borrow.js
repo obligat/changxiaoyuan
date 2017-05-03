@@ -31,7 +31,7 @@ Page({
             if (days >= 0) {
               Object.assign(item, { returnInfo: '剩余 ' + days + ' 天' })
             } else {
-              Object.assign(item, { returnInfo: '超期 ' + (-days) + ' 天' })
+              Object.assign(item, { returnInfo: '超期 ' + (days) + ' 天' })
             }
           })
           that.setData({

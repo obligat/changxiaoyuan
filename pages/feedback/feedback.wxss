@@ -19,21 +19,22 @@ button {
   position: relative;
   margin-top: -60rpx;
   margin-left: 70%;
-  background-size: cover;
   border-radius: 50%;
-  background-image: url(../../images/send.png);
   box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
 }
 
-button:focus {
-  background-image: url(../../images/send.png);
+image {
+  width: 120rpx;
+  height: 120rpx;
+  left: 0;
+  position: absolute;
 }
 
 .wetoast__bd {
   width: 360rpx;
   height: 160rpx;
   bottom: 700rpx;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
 }
 

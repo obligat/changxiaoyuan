@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/feedback/feedback",
     "pages/index/index",
+    "pages/feedback/feedback",
     "pages/bookDetail/bookDetail",
     "pages/loginZhiHuiClass/loginZhiHuiClass",
     "pages/loginLibrary/loginLibrary",

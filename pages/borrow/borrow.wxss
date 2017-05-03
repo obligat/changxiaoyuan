@@ -1,13 +1,7 @@
 /* pages/borrow/borrow.wxss */
 
-.wapper {
-  background-color: #f5f5f5;
-  height: 1250rpx;
-}
-
 .container {
   align-items: center;
-  position: relative;
 }
 
 .sno {
@@ -24,9 +18,20 @@
   box-shadow: 0 3rpx 6rpx rgba(87, 87, 87, 0.4);
 }
 
-.btn-logout, .btn-renew {
-  position: absolute;
+.sno > view {
+  margin-right: 360rpx;
+}
+
+.btn-logout {
   background: #e56360;
+  color: #fff;
+  height: 60rpx;
+  width: 120rpx;
+  font-size: 26rpx;
+}
+
+.btn-renew {
+  position: absolute;
   color: #fff;
   height: 60rpx;
   width: 120rpx;
@@ -78,7 +83,4 @@
 
 .main-font-color {
   font-size: 32rpx;
-}
-
-.borrow-time {
 }

@@ -43,8 +43,9 @@
 .cancel-tip {
   width: 28rpx;
   height: 28rpx;
-  right: 30rpx;
   position: absolute;
+  top: 28rpx;
+  right: 30rpx;
 }
 
 .book-list {

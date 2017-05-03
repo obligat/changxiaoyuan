@@ -1,23 +1,21 @@
 
 <!--pages/borrow/borrow.wxml-->
-<view class="wapper">
-  <view class="container">
-    <view class="sno">
-      <text class="h5 sub-font-color">{{username}}</text>
-      <button class="btn-logout" bindtap="logoutLibrary">退出</button>
-    </view>
-    <view class="title sub-font-color"> 已借阅</view>
-    <view class="borrow-list">
-      <block wx:for="{{borrowInfo}}" wx:key="{{index}}">
-        <view class="borrow-list-item">
-          <view class="borrow-info">
-            <text class="main-font-color">{{item.title}}</text>
-            <button class="{{item.renew?'btn-renew':'btn-not-renew'}}" data-bookid="{{item.bookid}}" bindtap="{{item.renew?'handleRenew':''}}">
-              {{item.renew?'续借':'不可续借'}}</button>
-          </view>
-          <view class="borrow-time h5 sub-font-color">{{item.returnInfo}}</view>
+<view class="container">
+  <view class="sno">
+    <view class="h5 sub-font-color">{{username}}</view>
+    <button class="btn-logout" bindtap="logoutLibrary">退出</button>
+  </view>
+  <view class="title sub-font-color"> 已借阅</view>
+  <view class="borrow-list">
+    <block wx:for="{{borrowInfo}}" wx:key="{{index}}">
+      <view class="borrow-list-item">
+        <view class="borrow-info">
+          <text class="main-font-color">{{item.title}}</text>
+          <button class="{{item.renew?'btn-renew':'btn-not-renew'}}" data-bookid="{{item.bookid}}" bindtap="{{item.renew?'handleRenew':''}}">
+            {{item.renew?'续借':'不可续借'}}</button>
         </view>
-      </block>
-    </view>
+        <view class="borrow-time h5 sub-font-color">{{item.returnInfo}}</view>
+      </view>
+    </block>
   </view>
 </view>
