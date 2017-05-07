@@ -35,20 +35,9 @@ Page({
       })
     })
   },
-  onReady: function () {
-    // 页面渲染完成
-  },
   onShow: function () {
-    // 页面显示
     this.setData({
       username: wx.getStorageSync('username')
     })
-    console.log('usercenter username: ' + this.data.username)
-  },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
   }
 })

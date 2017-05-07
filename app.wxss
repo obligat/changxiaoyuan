@@ -30,6 +30,10 @@
   font-size: 34rpx;
 }
 
+.search-box > input {
+  flex: 1;
+}
+
 .h1 {
   font-size: 64rpx;
 }
@@ -104,4 +108,8 @@
   background: rgba(103, 213, 255, 0.8);
   line-height: 70rpx;
   border-radius: 50rpx;
+}
+
+button:focus, button:hover {
+  background: rgba(103, 213, 255, 0.6);
 }

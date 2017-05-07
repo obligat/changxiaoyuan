@@ -17,7 +17,6 @@ Page({
         data: {},
         method: 'GET',
         success: function (res) {
-          console.log(res)
           if (res.data.msg) {
             that.setData({
               errorMsg: res.data.msg

@@ -30,6 +30,10 @@
   font-size: 26rpx;
 }
 
+.btn-logout:hover {
+  background: rgba(229, 99, 96, 0.6);
+}
+
 .btn-renew {
   position: absolute;
   color: #fff;

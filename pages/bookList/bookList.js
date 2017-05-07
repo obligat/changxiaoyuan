@@ -50,7 +50,6 @@ Page({
     this.setData({
       animationData: animation.export()
     })
-    console.log(this.data.animationData)
   },
   clearSearchInput() {
     this.setData({

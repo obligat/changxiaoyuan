@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/yellowpage/yellowpage",
     "pages/feedback/feedback",
     "pages/bookDetail/bookDetail",
     "pages/loginZhiHuiClass/loginZhiHuiClass",

@@ -67,3 +67,7 @@
   background: #e56360;
   color: #fff;
 }
+
+.btn-logout:hover {
+  background: rgba(229, 99, 96, 0.6);
+}

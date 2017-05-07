@@ -1,0 +1,86 @@
+
+<!--pages/yellowpage/yellowpage.wxml-->
+<view class="container">
+  <view class="wrapper">
+    <view class="search-box">
+      <input placeholder="输入关键字拼音首字母以快速匹配，如kc" placeholder-class="input-placeholder" value="{{searchInput}}" bindinput="handleKeyInput" />
+      <view class="icon-cancel" style="opacity:{{searchInput?opacity:''}}" bindtap="clearSearchInput">X</view>
+    </view>
+  </view>
+  <view class="choose-btn">
+    <view class="{{current==1?'underline':''}}" bindtap="handleTap1">订外卖</view>
+    <view class="{{current==2?'underline':''}}" bindtap="handleTap2">查固话</view>
+  </view>
+  <view class="content">
+    <block wx:if="{{current == 1}}">
+      <view class="match-box">
+        <block wx:if="{{matchedXuriyuan.length}}">
+          <view class="match-title sub-font-color first-title">旭日苑</view>
+          <view class="table-item main-font-color {{item.weixin?'weixin-item':''}} " wx:for="{{matchedXuriyuan}}" wx:key="index">
+            <view class="match-name">{{item.name}}</view>
+            <view>
+              <view>电话：{{item.tel}}</view>
+              <view class="weixin" wx:if="{{item.weixin}}">微信：{{item.weixin}}</view>
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{matchedMeishisquare.length}}">
+          <view class="match-title sub-font-color">美食广场</view>
+          <view class="table-item main-font-color {{item.weixin?'weixin-item':''}}" wx:for="{{matchedMeishisquare}}" wx:key="index">
+            <view class="match-name">{{item.name}}</view>
+            <view>
+              <view>电话：{{item.tel}}</view>
+              <view class="weixin" wx:if="{{item.weixin}}">微信：{{item.weixin}}</view>
+            </view>
+          </view>
+        </block>
+        <view class="no-match-result sub-font-color" wx:if="{{!matchedXuriyuan.length&&!matchedMeishisquare.length&&searchInput}}">
+          没有匹配结果
+        </view>
+      </view>
+      <view>
+        <view class="table-title sub-font-color">旭日苑</view>
+        <view class="table-list" wx:for="{{xuriyuan}}" wx:key="index">
+          <view class="table-item main-font-color {{item.weixin?'weixin-item':''}}">
+            <view class="table-name">{{item.name}}</view>
+            <view>
+              <view>电话：{{item.tel}}</view>
+              <view class="weixin" wx:if="{{item.weixin}}">微信：{{item.weixin}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="table-title sub-font-color">美食广场</view>
+        <view class="table-list" wx:for="{{meishisquare}}" wx:key="index">
+          <view class="table-item main-font-color {{item.weixin?'weixin-item':''}}">
+            <view class="table-name">{{item.name}}</view>
+            <view>
+              <view>电话：{{item.tel}}</view>
+              <view class="weixin" wx:if="{{item.weixin}}">微信：{{item.weixin}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{current == 2}}">
+      <view class="match-box">
+        <view wx:for="{{matchedPhoneInfo}}" wx:if="{{matchedPhoneInfo.length}}" wx:key="index">
+          <view class="match-title sub-font-color">{{item.title}}</view>
+          <view class="table-item main-font-color" wx:for="{{item.items}}" wx:for-item="i" wx:for-index="idx" wx:key="idx">
+            <view class="match-label"> {{i.label}}</view>
+            <view> {{i.value}}</view>
+          </view>
+        </view>
+        <view class="no-match-result sub-font-color" wx:if="{{!matchedPhoneInfo.length && searchInput}}"> 没有匹配结果</view>
+      </view>
+      <view wx:for="{{phoneInfo}}" wx:key="index">
+        <view class="table-title sub-font-color">{{item.title}}</view>
+        <view class="table-list" wx:for="{{item.items}}" wx:for-item="i" wx:for-index="idx" wx:key="idx">
+          <view class="table-item main-font-color">
+            <view class="table-label">{{i.label}}</view>
+            <view>{{i.value}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

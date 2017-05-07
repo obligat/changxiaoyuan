@@ -14,7 +14,6 @@ Page({
     gradients: ['#32b8d5', '#29b5da', '#16c5d5', '#0ad9f1', '#2af2fa']
   },
   handleKeyInput(e) {
-    console.log(e)
     this.setData({
       searchInput: e.detail.value
     })
@@ -48,6 +47,12 @@ Page({
         url: '../loginLibrary/loginLibrary'
       })
     }
+  },
+  handleYellowpage(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: '../yellowpage/yellowpage'
+    })
   },
   handleSwiper(e) {
     this.setData({
@@ -85,8 +90,12 @@ Page({
           "content-type": "application/x-www-form-urlencoded"
         },
         success: function (res) {
+          console.log(res)
           var filterResult = sort.filterByWeekNum(res.data.Obj)
+          console.log(filterResult)
+
           var sortResult = sort.sortByJT_NO(filterResult)
+          console.log(sortResult)
           wx.setStorageSync('courseMessage', sortResult)
           that.setData({
             courseMessage: wx.getStorageSync('courseMessage')

@@ -9,7 +9,7 @@
   </view>
   <view class="btn-group">
     <button>无课教室</button>
-    <button>西邮黄页</button>
+    <button bindtap="handleYellowpage">西邮黄页</button>
     <button bindtap="handleBorrow">借阅查询</button>
   </view>
   <view class="class-table">

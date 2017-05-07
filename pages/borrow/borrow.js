@@ -42,7 +42,6 @@ Page({
     })
   },
   handleRenew(e) {
-    console.log(e.target.dataset)
     var that = this
     var bookid = e.target.dataset.bookid
     var borrowInfo = this.data.borrowInfo

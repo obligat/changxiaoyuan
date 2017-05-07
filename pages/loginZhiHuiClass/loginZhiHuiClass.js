@@ -8,7 +8,6 @@ Page({
     errorMsg: ''
   },
   formSubmit: function (e) {
-    console.log(e)
     var that = this
     wx.request({
       url: 'https://wwwxinle.cn/wechatapp/register.php',
@@ -22,8 +21,6 @@ Page({
         "content-type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
-        console.log('response of request loginZhiHuiClass register.php ------ ')
-        console.log(res)
         if (res.data.res == "该账号已绑定") {
           that.wetoast.toast({
             title: '该账号已绑定',
@@ -40,16 +37,7 @@ Page({
 
           setTimeout(function () {
             wx.navigateBack({
-              delta: 1, // 回退前 delta(默认为1) 页面
-              success: function (res) {
-                // success
-              },
-              fail: function (res) {
-                // fail
-              },
-              complete: function (res) {
-                // complete
-              }
+              delta: 1
             })
           }, 1000)
 
@@ -98,17 +86,5 @@ Page({
   onLoad: function () {
     util.isSessionValid()
     new app.WeToast()
-  },
-  onReady: function () {
-    // 页面渲染完成
-  },
-  onShow: function () {
-    // 页面显示
-  },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
   }
 })
