@@ -68,6 +68,6 @@
   color: #fff;
 }
 
-.btn-logout:hover {
+.button-hover {
   background: rgba(229, 99, 96, 0.6);
 }

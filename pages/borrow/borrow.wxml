@@ -3,7 +3,7 @@
 <view class="container">
   <view class="sno">
     <view class="h5 sub-font-color">{{username}}</view>
-    <button class="btn-logout" bindtap="logoutLibrary">退出</button>
+    <button class="btn-logout" hover-class="button-hover" bindtap="logoutLibrary">退出</button>
   </view>
   <view class="title sub-font-color"> 已借阅</view>
   <view class="borrow-list">

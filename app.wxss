@@ -110,6 +110,6 @@
   border-radius: 50rpx;
 }
 
-button:focus, button:hover {
+.button-hover {
   background: rgba(103, 213, 255, 0.6);
 }

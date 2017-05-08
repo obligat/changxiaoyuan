@@ -109,3 +109,7 @@
   display: flex;
   flex-direction: column;
 }
+
+.match-phone {
+  white-space: nowrap;
+}

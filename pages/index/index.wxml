@@ -8,9 +8,9 @@
     </view>
   </view>
   <view class="btn-group">
-    <button>无课教室</button>
-    <button bindtap="handleYellowpage">西邮黄页</button>
-    <button bindtap="handleBorrow">借阅查询</button>
+    <button hover-class="button-hover">无课教室</button>
+    <button hover-class="button-hover" bindtap="handleYellowpage">西邮黄页</button>
+    <button hover-class="button-hover" bindtap="handleBorrow">借阅查询</button>
   </view>
   <view class="class-table">
     <view class="no-class-table" wx:if="{{!username}}">

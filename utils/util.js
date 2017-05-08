@@ -115,6 +115,7 @@ function isSessionValid() {
       "content-type": "application/x-www-form-urlencoded"
     },
     success: function (res) {
+      console.log(res.data.res)
       if (res.data.res == 'session已过期') {
         weixinLogin()
       }

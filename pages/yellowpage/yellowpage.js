@@ -67,12 +67,14 @@ Page({
   },
   handleTap1() {
     this.setData({
-      current: 1
+      current: 1,
+      searchInput: ''
     })
   },
   handleTap2() {
     this.setData({
-      current: 2
+      current: 2,
+      searchInput: ''
     })
   },
   onLoad: function (options) {

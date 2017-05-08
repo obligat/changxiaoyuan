@@ -67,7 +67,7 @@
           <view class="match-title sub-font-color">{{item.title}}</view>
           <view class="table-item main-font-color" wx:for="{{item.items}}" wx:for-item="i" wx:for-index="idx" wx:key="idx">
             <view class="match-label"> {{i.label}}</view>
-            <view> {{i.value}}</view>
+            <view class="match-phone"> {{i.value}}</view>
           </view>
         </view>
         <view class="no-match-result sub-font-color" wx:if="{{!matchedPhoneInfo.length && searchInput}}"> 没有匹配结果</view>

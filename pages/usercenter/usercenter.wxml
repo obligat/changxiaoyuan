@@ -13,5 +13,5 @@
     <text>反馈 </text>
     <image class="right-arrow" src="../../images/more.png"></image>
   </navigator>
-  <button class="btn-logout {{username ? '': 'hidden'}}" bindtap="logout">注销</button>
+  <button hover-class="button-hover" class="btn-logout {{username ? '': 'hidden'}}" bindtap="logout">注销</button>
 </view>
