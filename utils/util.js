@@ -117,6 +117,7 @@ function isSessionValid() {
     success: function (res) {
       console.log(res.data.res)
       if (res.data.res == 'session已过期') {
+        wx.setStorageSync('courseMessage', '')
         weixinLogin()
       }
     }

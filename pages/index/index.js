@@ -62,8 +62,8 @@ Page({
   onLoad: function () {
     util.isSessionValid()
     this.setData({
-      username: wx.getStorageSync('username'),
-      courseMessage: wx.getStorageSync('courseMessage')
+      username: wx.getStorageSync('username') || '',
+      courseMessage: wx.getStorageSync('courseMessage') || ''
     })
 
     var day = new Date()
