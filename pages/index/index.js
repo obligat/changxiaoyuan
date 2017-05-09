@@ -75,7 +75,7 @@ Page({
     }
   },
   onShow() {
-    if (!this.data.username && wx.getStorageSync('username')) {
+    if ((!this.data.username && wx.getStorageSync('username')) || !wx.getStorageSync("courseMessage")) {
       this.setData({
         username: wx.getStorageSync('username')
       })
@@ -90,12 +90,8 @@ Page({
           "content-type": "application/x-www-form-urlencoded"
         },
         success: function (res) {
-          console.log(res)
           var filterResult = sort.filterByWeekNum(res.data.Obj)
-          console.log(filterResult)
-
           var sortResult = sort.sortByJT_NO(filterResult)
-          console.log(sortResult)
           wx.setStorageSync('courseMessage', sortResult)
           that.setData({
             courseMessage: wx.getStorageSync('courseMessage')
